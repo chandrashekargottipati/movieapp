@@ -1,0 +1,23 @@
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+
+
+<div class="container">
+    <div class="row">
+        <!-- Left Container (50%) -->
+        <div class="col-sm-6 left-container">
+            <div class="aem-container">
+                <!-- Include AEM container for left-side content -->
+                <div data-sly-resource="${'left' @ resourceType='movieapp/components/container'}"></div>
+            </div>
+        </div>
+        
+        <!-- Right Container (50%) -->
+        <div class="col-sm-6 right-container">
+            <div class="aem-container">
+                <!-- Include AEM container for right-side content -->
+                <div data-sly-resource="${'right' @ resourceType='movieapp/components/container'}"></div>
+            </div>
+        </div>
+    </div>
+</div>

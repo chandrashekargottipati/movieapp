@@ -1,0 +1,95 @@
+:root {
+  --color-brand--1: #ffb545;
+  --color-brand--2: #00c46a;
+
+  --color-dark--1: #2d3439;
+  --color-dark--2: #42484d;
+  --color-light--1: #aaa;
+  --color-light--2: #ececec;
+  --color-light--3: rgb(214, 222, 224);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%; /* Ensure the entire viewport is used */
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  color: var(--color-light--2);
+  font-weight: 400;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: row; /* Ensure the sidebar and map align horizontally */
+  background-color: #fff;
+  overflow: hidden; /* Avoid scrolling issues */
+}
+
+/* Sidebar */
+.sidebar {
+  flex-basis: 400px; /* Fixed width for sidebar */
+  background-color: var(--color-dark--1);
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  height: 5.2rem;
+  align-self: center;
+  margin-bottom: 4rem;
+}
+
+.workouts {
+  list-style: none;
+  overflow-y: auto;
+  flex-grow: 1;
+}
+
+/* Map Section */
+#map {
+  flex-grow: 1; /* The map takes up the remaining space */
+  height: 100vh; /* Ensure the map fills the available screen height */
+  max-height: 600px; /* Set a maximum height for the map */
+  min-height: 400px; /* Ensure a minimum height for the map */
+  background-color: var(--color-light--1);
+}
+
+.leaflet-popup .leaflet-popup-content-wrapper {
+  background-color: var(--color-dark--1);
+  color: var(--color-light--2);
+  border-radius: 5px;
+}
+
+.leaflet-popup .leaflet-popup-tip {
+  background-color: var(--color-dark--1);
+}
+
+.running-popup .leaflet-popup-content-wrapper {
+  border-left: 5px solid var(--color-brand--2);
+}
+.cycling-popup .leaflet-popup-content-wrapper {
+  border-left: 5px solid var(--color-brand--1);
+}
+
+/* Optional: Temporary background colors for testing */
+.sidebar {
+  background-color: lightblue; /* Optional: Visual aid for sidebar */
+}
+
+#map {
+  background-color: lightgreen; /* Optional: Visual aid for map */
+}
+.form.hidden {
+  transform: translateY(-30rem);
+  height: 0;
+  padding: 0 2.25rem;
+  margin-bottom: 0;
+  opacity: 0;
+}
